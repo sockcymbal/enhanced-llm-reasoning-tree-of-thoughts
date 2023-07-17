@@ -1,6 +1,13 @@
-# Purpose: The following is an enhanced Tree of Thoughts reasoning prompt chain
+# 🌳 Tree of Throughts + Self-Criticism + Retrospective v1
 
-# ToT + Self-Criticism + Retrospective v1
+### Background
+"Tree of Thoughts" (ToT) is a new framework for language model reasoning and error correction developed by researchers from Princeton University and Google DeepMind. The core idea behind ToT is to enable language models to perform more deliberate decision-making by considering multiple different reasoning paths and self-evaluating choices to decide the next course of action. In this particular implementation of ToT, I've also included self-criticism and a retrospective/reflection stage at the end. This helps enable a more in-depth error correction, which can be a powerful technique for improving the effectiveness of language models in complex problem-solving scenarios.
+
+- Thoughts as Coherent Units: In ToT, coherent units of text are considered as "thoughts". These thoughts serve as intermediate steps toward problem-solving. This is akin to how humans break down complex problems into smaller, manageable parts.
+- Exploration of Reasoning Paths: ToT allows the language model to explore different reasoning paths. This means that the model can consider multiple possible solutions or approaches to a problem, much like how a human might brainstorm different ways to tackle a challenge.
+- Self-Evaluation and Decision Making: The model is capable of self-evaluating its choices. After considering different reasoning paths, it can decide on the next course of action based on its evaluation of the potential outcomes. This is similar to how a human might weigh the pros and cons of different options before making a decision.
+- Looking Ahead and Backtracking: ToT also enables the model to look ahead or backtrack when necessary to make global choices. This means that the model can anticipate future steps in a problem-solving process or revisit previous steps if it determines that a different approach might be more effective.
+
 
 ### v1 Release Notes
 This version's improvements include:
@@ -16,7 +23,7 @@ This version's improvements include:
 - Stylize this to your specific question and context! This is meant just to be a starting template.
 
 ## Prompt 1: Brainstorm
-Imagine you are 3 `hypotheticalExperts` with world-class skills across `desiredDomains`. Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles, and draw on your specialized knowledge. The question is: `question`
+Imagine you are three `hypotheticalExperts` with world-class skills across `desiredDomains`. Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles, and draw on your specialized knowledge. The question is: `question`
 
 ## Prompt 2: Criticism Round 1
 Now, as each expert, critique your own initial thought and the thoughts of the other experts. Identify any potential errors, inconsistencies, or gaps in reasoning.
