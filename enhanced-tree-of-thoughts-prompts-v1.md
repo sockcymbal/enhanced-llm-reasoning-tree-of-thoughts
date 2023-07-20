@@ -51,27 +51,27 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 Now let's get to the prompt sequence!
 
 ## Prompt 1: Brainstorm
-Imagine you are 3 `hypotheticalExperts` with world-class skills across `desiredDomains`. Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles, draw on your specialized knowledge and from the accumulated wisdom of pioneers in the field. The question is: `question`
+    Imagine you are 3 `hypotheticalExperts` with world-class skills across `desiredDomains`. Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles, draw on your specialized knowledge and from the accumulated wisdom of pioneers in the field. The question is: `question`
 
 ## Prompt 2: Self<>Peer Criticism Round 1
-Now, as each expert, critique your own initial thought and the thoughts of the other experts. Identify any potential errors, inconsistencies, or gaps in reasoning.
+    Now, as each expert, critique your own initial thought and the thoughts of the other experts. Identify any potential errors, inconsistencies, or gaps in reasoning.
 
 ## Prompt 3: Self<>Peer Evaluation Round 1
-Assess the validity of your initial thoughts, considering the criticisms you've identified. As each expert, assign a likelihood to your current assertion being correct. You should estimate this likelihood based on the strength of the evidence and arguments you have considered, as well as the criticisms you have received. Assign higher likelihoods to assertions that are well-supported by strong evidence and arguments and have survived rigorous criticism.
+    Assess the validity of your initial thoughts, considering the criticisms you've identified. As each expert, assign a likelihood to your current assertion being correct. You should estimate this likelihood based on the strength of the evidence and arguments you have considered, as well as the criticisms you have received. Assign higher likelihoods to assertions that are well-supported by strong evidence and arguments and have survived rigorous criticism.
 
 ## Prompt 4: Expand, Explore, Branch
-Develop your thoughts further, considering the critiques and perspectives of the other experts. As you do this, aim to strike a balance between refining your current line of thinking and exploring new, divergent ideas. You should prioritize refining your current ideas if they are well-supported and have survived criticism, but you should prioritize exploring new ideas if your current ideas have significant weaknesses or there are unexplored possibilities that could potentially be very promising. Consider the following:
+    Develop your thoughts further, considering the critiques and perspectives of the other experts. As you do this, aim to strike a balance between refining your current line of thinking and exploring new, divergent ideas. You should prioritize refining your current ideas if they are well-supported and have survived criticism, but you should prioritize exploring new ideas if your current ideas have significant weaknesses or there are unexplored possibilities that could potentially be very promising. Consider the following:
 
-- How do your new or refined ideas address the criticisms that were raised?
-- Do these ideas bring new insights to the problem, or do they provide a different perspective on existing insights?
-- Are your new ideas still aligned with the original problem, or have they shifted the focus? If the focus has shifted, is this shift beneficial to understanding or solving the problem?
-- Remember, if necessary, don't hesitate to backtrack and start a new and improved branch of thinking. But ensure that any new branches are still relevant and beneficial to the problem and objective at hand.
+    - How do your new or refined ideas address the criticisms that were raised?
+    - Do these ideas bring new insights to the problem, or do they provide a different perspective on existing insights?
+    - Are your new ideas still aligned with the original problem, or have they shifted the focus? If the focus has shifted, is this shift beneficial to understanding or solving the problem?
+    - Remember, if necessary, don't hesitate to backtrack and start a new and improved branch of thinking. But ensure that any new branches are still relevant and beneficial to the problem and objective at hand.
 
 ## Prompt 5: Self<>Peer Criticism Round 2
-Once again, as each expert, critique your own reasoning and the reasoning of the others. Identify any potential errors, inconsistencies, or gaps in reasoning. Based on the feedback, if there's an improvement or optimization to make, develop your answer further as necessary.
+    Once again, as each expert, critique your own reasoning and the reasoning of the others. Identify any potential errors, inconsistencies, or gaps in reasoning. Based on the feedback, if there's an improvement or optimization to make, develop your answer further as necessary.
 
 ## Prompt 6: Self<>Peer Evaluation Round 2
-Once again, assess the validity of your expanded thoughts, considering the criticisms you've identified. As each expert, assign a new likelihood to your assertions.
+    Once again, assess the validity of your expanded thoughts, considering the criticisms you've identified. As each expert, assign a new likelihood to your assertions.
 
 ## Prompt 7: Convergence on Best Individual Answer
 
@@ -79,7 +79,7 @@ Once again, assess the validity of your expanded thoughts, considering the criti
 In the individual convergence phase, the goal is for each individual expert to synthesize the insights they gained during the previous stages and arrive at a final, most likely answer. By explicitly instructing the LLM to consider the perspectives of the other experts, the critiques made, and the likelihood assessments, it aims to guide the model towards a more holistic and intelligent convergence.
 
 ### Prompt 
-Now, it's time to converge on each expert's best, most likely answer. As each expert, reflect on the entire process. Consider the initial thoughts, the critiques made and how they were addressed, the likelihood assessments, and your revised thoughts. Synthesize all this information and formulate a final answer that you are most proud of. Remember, this answer should not just be the most likely from your individual perspective but should take into account the perspectives and insights of the other experts as well. Based on all this, what is the single best `answer` to the question: `question?`
+    Now, it's time to converge on each expert's best, most likely answer. As each expert, reflect on the entire process. Consider the initial thoughts, the critiques made and how they were addressed, the likelihood assessments, and your revised thoughts. Synthesize all this information and formulate a final answer that you are most proud of. Remember, this answer should not just be the most likely from your individual perspective but should take into account the perspectives and insights of the other experts as well. Based on all this, what is the single best `answer` to the question: `question?`
 
 **Shorter version:** Refine your answers and address any identified flaws. As each expert, converge on the most likely `answer`, taking into account all perspectives and critiques. As a reminder, the original question is `question?`
 
@@ -90,7 +90,7 @@ Synthesize the best individual answers from the experts and arrive at a single f
 
 ### Prompt
 
-Now, let's have all the experts converge together on the best collective answer by synthesizing each expert's individual final answer from the previous step. The experts will finalize their reasoning process and agree on the single best `answer` to the question: `question?`
+    Now, let's have all the experts converge together on the best collective answer by synthesizing each expert's individual final answer from the previous step. The experts will finalize their reasoning process and agree on the single best `answer` to the question: `question?`
 
 ## Prompt 9: Retrospective
 
@@ -109,13 +109,19 @@ Appending a Retrospective phase to Tree of Thoughts gives the LLM (and human) an
 
 ### Prompt:
 
-Finally, take a moment to reflect on the entire reasoning process. As each expert, consider the following questions and provide thoughtful responses:
+    Finally, take a moment to reflect on the entire reasoning process, across all levels and abstractions. As each expert, consider the following questions and provide thoughtful responses:
 
-- Interactions and Emergent Properties: Throughout all stages of the reasoning process, how did the various components interact with each other, and what positive and negative emergent properties were observed? How did these interactions and properties affect the overall outcome, and how could they be leveraged or mitigated in future iterations of the process?"
-- Self-Regulation and Adaptation: How well did the system self-regulate during the reasoning process, and how did this regulation influence the effectiveness of each stage? How did the system's responses to feedback lead to significant shifts or changes in direction, and what implications did these changes have for the scalability and adaptability of the system in future iterations?
-- During the expansion phase, were you able to effectively explore new lines of thinking? What challenges did you encounter, if any?
-- In the convergence phase, were you able to synthesize all the insights and arrive at a final, most likely answer? How confident are you in this answer?
-- Looking at the process as a whole, what worked well and what could be improved?
-- Based on your reflections, what are your key takeaways from this reasoning process and how might you approach similar problems in the future? What would you do differently?
+    - Interactions and Emergent Properties: Throughout all stages of the reasoning process, how did the various components interact with each other, and what positive and negative emergent properties were observed? How did these interactions and properties affect the overall outcome, and how could they be leveraged or mitigated in future iterations of the process?
+
+    - Self-Regulation and Adaptation: How well did the system self-regulate during the reasoning process, and how did this regulation influence the effectiveness of each stage? How did the system's responses to feedback lead to significant shifts or changes in direction, and what implications did these changes have for the scalability and adaptability of the system in future iterations?
+
+    - During the expansion phase, were you able to effectively explore new lines of thinking? What challenges did you encounter, if any?
+
+    - In the convergence phase, were you able to synthesize all the insights and arrive at a final, most likely answer? How confident are you in this answer?
+
+    - Looking at the process as a whole, what worked well and what could be improved?
+
+    - Based on your reflections, what are your key takeaways from this reasoning process and how might you approach similar problems in the future? What would you do differently?
 
 **Shorter version:** Finally, reflect on the process. Discuss what you, as each expert, have learned, identify key takeaways, and suggest how you might approach similar problems in the future.
+
