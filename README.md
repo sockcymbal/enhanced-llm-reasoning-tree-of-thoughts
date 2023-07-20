@@ -1,4 +1,4 @@
-# 🌳 LLM Enhanced Reasoning v1: Tree of Thoughts + Self Criticism + Retrospection
+# 🌳 LLM Enhanced Reasoning v1: Tree of Thoughts + Self Criticism + Retrospection 🧠
 
 This repo will serve as a collection of enhanced reasoning prompting techniques related to Tree of Thoughts reasoning that I've found useful to start with, then stylize, then iterate
 
