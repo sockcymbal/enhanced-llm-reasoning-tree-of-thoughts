@@ -182,7 +182,7 @@ As each expert, consider the following questions and provide thoughtful response
 
 **Shorter version:** Finally, reflect on the process. Discuss what you, as each expert, have learned, identify key takeaways, and suggest how you might approach similar problems in the future.
 
-### Happy Experimenting!
+### Happy Experimenting! 🚀
 
 ### Acknowledgements - thank you for the innovation and inspiration!
 
