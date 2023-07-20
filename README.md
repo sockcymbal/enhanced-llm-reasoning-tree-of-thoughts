@@ -1,6 +1,6 @@
 # 🌳 LLM Enhanced Reasoning v1: Tree of Thoughts + Self Criticism + Retrospection 🧠
 
-This repo will serve as a collection of enhanced reasoning prompting techniques related to Tree of Thoughts reasoning that I've found useful to start with, then stylize, then iterate
+This repo will serve as a collection of remixed/enhanced reasoning prompting techniques related to Tree of Thoughts reasoning that I've found useful to start with, then stylize, then iterate
 
 ### Context
 The intention is to create a dynamic, adaptive, and iterative reasoning/error correction "stack" using a prompt sequence that combines Tree of Thoughts + Self Criticism + Retrospection. This can be thought of as an evolving general purpose LLM reasoning technique that can be used as part of a well-rounded hallucination mitigation repertoire, and I've had good success with it recently.
