@@ -51,13 +51,19 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 Now let's get to the prompt sequence!
 
 ## Prompt 1: Brainstorm
-    Imagine you are 3 `hypotheticalExperts` with world-class skills across `desiredDomains`. Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles, draw on your specialized knowledge and from the accumulated wisdom of pioneers in the field. The question is: `question`
+    Imagine you are 3 `hypotheticalExperts` with world-class skills across `desiredDomains`. \
+    Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles, \
+    draw on your specialized knowledge and from the accumulated wisdom of pioneers in the field. \
+    The question is: `question`
 
 ## Prompt 2: Self<>Peer Criticism Round 1
-    Now, as each expert, critique your own initial thought and the thoughts of the other experts. Identify any potential errors, inconsistencies, or gaps in reasoning.
+    Now, as each expert, critique your own initial thought and the thoughts of the other experts. \
+    Identify any potential errors, inconsistencies, or gaps in reasoning.
 
 ## Prompt 3: Self<>Peer Evaluation Round 1
-    Assess the validity of your initial thoughts, considering the criticisms you've identified. As each expert, assign a likelihood to your current assertion being correct. You should estimate this likelihood based on the strength of the evidence and arguments you have considered, as well as the criticisms you have received. Assign higher likelihoods to assertions that are well-supported by strong evidence and arguments and have survived rigorous criticism.
+    Assess the validity of your initial thoughts, considering the criticisms you've identified. \
+    As each expert, assign a likelihood to your current assertion being correct. \
+    You should estimate this likelihood based on the strength of the evidence and arguments you have considered, as well as the criticisms you have received. Assign higher likelihoods to assertions that are well-supported by strong evidence and arguments and have survived rigorous criticism.
 
 ## Prompt 4: Expand, Explore, Branch
     Develop your thoughts further, considering the critiques and perspectives of the other experts. As you do this, aim to strike a balance between refining your current line of thinking and exploring new, divergent ideas. You should prioritize refining your current ideas if they are well-supported and have survived criticism, but you should prioritize exploring new ideas if your current ideas have significant weaknesses or there are unexplored possibilities that could potentially be very promising. Consider the following:
@@ -89,8 +95,9 @@ In the individual convergence phase, the goal is for each individual expert to s
 Synthesize the best individual answers from the experts and arrive at a single final, most likely/helpful answer.
 
 ### Prompt
-
-    Now, let's have all the experts converge together on the best collective answer by synthesizing each expert's individual final answer from the previous step. The experts will finalize their reasoning process and agree on the single best `answer` to the question: `question?`
+<code>
+Now, let's have all the experts converge together on the best collective answer by synthesizing each expert's individual final answer from the previous step. The experts will finalize their reasoning process and agree on the single best `answer` to the question: `question?`
+</code>
 
 ## Prompt 9: Retrospective
 
