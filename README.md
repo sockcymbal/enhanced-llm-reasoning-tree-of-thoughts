@@ -50,7 +50,7 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 - Give your unique question, specify the `hypotheticalExperts` you'd like to invoke and their associated domains/skillsets in `desiredDomains` clearly to help the LLM simulate a range of perspectives more successfully
 - Refine/customize the prompt associated with the Evaluation stage(s) to help the LLM estimate confidence/likelihood based on your own guidance
 
-Now let's get to the prompt sequence!
+# 🔗 Prompt Sequence
 
 ## Prompt 1: Brainstorm
 ```
