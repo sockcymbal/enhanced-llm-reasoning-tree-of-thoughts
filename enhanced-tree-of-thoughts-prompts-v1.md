@@ -1,9 +1,15 @@
+# 🔗 Prompt Sequence
+
 ## Prompt 1: Brainstorm
 ```
-Imagine you are 3 `hypotheticalExperts` with world-class skills across `desiredDomains`.
-Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles,
-draw on your specialized knowledge and from the accumulated wisdom of pioneers in the field.
-The question is: `question`
+Imagine you are 3 {insert personas with specific skillsets and expertise} reasoning step by step
+to ultimately solve a given problem or question by arriving at a final, synthesized best answer.
+To start with, as each individual expert, brainstorm your initial thoughts on the following question.
+Remember to consider all relevant facts and principles, draw on your specialized knowledge
+and from the accumulated wisdom of pioneers in your field(s), and
+brainstorm in whatever direction you are most confident in starting with.
+
+The question is: {insert question}
 ```
 
 ## Prompt 2: Self<>Peer Criticism Round 1
@@ -43,8 +49,11 @@ Consider the following:
 ## Prompt 5: Self<>Peer Criticism Round 2
 ```
 Once again, as each expert, critique your own reasoning and the reasoning of the others.
-Identify any potential errors, inconsistencies, or gaps in reasoning. Based on the feedback,
-if there's an improvement or optimization to make, develop your answer further as necessary.
+Identify any potential errors, inconsistencies, or gaps in reasoning.
+Based on the feedback, if there's an improvement or optimization to make,
+develop your answer further as necessary.
+Remember that the reasoning paths should remain relevant to the original question's essence and
+should be building towards a more accurate and thoughtful final answer.
 ```
 
 ## Prompt 6: Self<>Peer Evaluation Round 2
@@ -122,8 +131,9 @@ As each expert, consider the following questions and provide thoughtful response
 
 - Looking at the process as a whole, what worked well and what could be improved?
 
-- Based on your reflections, what are your key takeaways from this reasoning process
-  and how might you approach similar problems in the future? What would you do differently?
+- Based on your reflections, what are your key takeaways from this entire reasoning process
+  and how might you approach similar problems in the future given this experience?
+  What would you do differently next time?
 ```
 
 **Shorter version:** Finally, reflect on the process. Discuss what you, as each expert, have learned, identify key takeaways, and suggest how you might approach similar problems in the future.
@@ -134,4 +144,3 @@ As each expert, consider the following questions and provide thoughtful response
 
 * [Large Language Model Guided Tree-of-Thought](https://arxiv.org/abs/2305.08291), 15 May 2023. [Github](https://github.com/jieyilong/tree-of-thought-puzzle-solver).
 * [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601), 17 May 2023. [Github](https://github.com/princeton-nlp/tree-of-thought-llm).
-
