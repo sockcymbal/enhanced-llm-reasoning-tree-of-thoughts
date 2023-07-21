@@ -3,7 +3,7 @@
 ### Context
 This repo will serve as a collection of remixed/enhanced reasoning prompting techniques related to iterative LLM reasoning, such as Chain of Thought, Tree of Thoughts, and others that I've found useful to start with, then stylize, then iterate.
 
-The intention is to create a dynamic, adaptive, and iterative reasoning/error correction "stack" using a prompt sequence that combines Tree of Thoughts + Self Consistency + Self Criticism + Retrospection. On top of that we can define multiple personas for the LLM to simulate in order to incorporate more perspectives into the problem solving process, improving overall thoroughness. This can be thought of as an evolving general purpose LLM reasoning technique that can be used as part of a well-rounded hallucination mitigation repertoire, and I've had good success with it recently. There are trade offs with using a single LLM vs multiple for a multi-personal ToT implementation such as this one, but single is a great starting point. I'd love to hear if you have any suggestions for methodological improvement or if you're getting great results with some other modification!
+The intention is to create a dynamic, adaptive, and iterative reasoning/error correction "stack" using a prompt sequence that combines Tree of Thoughts + Self Consistency + Self Criticism + Retrospection. On top of that we can define multiple personas for the LLM to simulate in order to incorporate more perspectives into the problem solving process, improving overall thoroughness. This can be thought of as an evolving general purpose LLM reasoning technique that can be used as part of a well-rounded hallucination mitigation repertoire, and I've had good success with it recently. There are trade offs with using a single LLM vs multiple for a multi-persona ToT implementation such as this one. For example, using separate LLMs per persona means you can expose each persona to different context or data, vs a single LLM role playing across a shared context. But using a single is an excellent starting point that I've found surprisingly helpful. I'd love to hear if you have any suggestions for methodological improvement or if you're getting great results with some other modification!
 
 ### 🎶 Reasoning Rhythm
 - Multi-Persona Brainstorming
@@ -37,7 +37,7 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 - **Adding a Retrospective Stage:** After the final convergence on the best answer, a reflection stage has been added. Here, the experts can discuss what they learned from the process, identify key takeaways, and suggest how they might approach similar problems in the future.
 
 #### Context on Tree of Thoughts
-"Tree of Thoughts" (ToT) is a technique for language model reasoning and error correction. The core idea behind ToT is to enable language models to perform more deliberate decision-making by considering multiple different reasoning paths and self-evaluating choices to decide the next course of action. In this particular implementation of ToT, I've also included self-criticism and a retrospective/reflection stage at the end. This helps enable a more in-depth error correction, which can be a powerful technique for improving the effectiveness of language models in complex problem-solving scenarios. Features include:
+"Tree of Thoughts" (ToT) is a technique for language model reasoning and error correction. The core idea behind ToT is to enable language models to perform more deliberate decision-making by considering multiple different reasoning paths and self-evaluating choices to decide the next course of action. In this particular implementation of ToT, I've also included self-criticism and a retrospective/reflection stage at the end. This helps enable a more in-depth error correction and idea refinement, which can be a powerful technique for improving the effectiveness of language models in complex problem-solving scenarios. Features include:
 
 - Thoughts as Coherent Units: In ToT, coherent units of text are considered as "thoughts". These thoughts serve as intermediate steps toward problem-solving. This is akin to how humans break down complex problems into smaller, manageable parts.
 - Exploration of Reasoning Paths: ToT allows the language model to explore different reasoning paths. This means that the model can consider multiple possible solutions or approaches to a problem, much like how a human might brainstorm different ways to tackle a challenge.
@@ -113,7 +113,7 @@ Identify any potential errors, inconsistencies, or gaps in reasoning.
 Based on the feedback, if there's an improvement or optimization to make,
 develop your answer further as necessary.
 Remember that the reasoning paths should remain relevant to the original question's essence and
-should be building towards a more accurate and thoughful final answer.
+should be building towards a more accurate and thoughtful final answer.
 ```
 
 ## Prompt 6: Self<>Peer Evaluation Round 2
