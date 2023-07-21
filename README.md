@@ -1,12 +1,12 @@
-# 🌳 LLM Enhanced Reasoning v1: Multi-Persona Tree of Thoughts + Self Criticism + Retrospection 🧠
-
-This repo will serve as a collection of remixed/enhanced reasoning prompting techniques related to Tree of Thoughts reasoning that I've found useful to start with, then stylize, then iterate
+# 🌳 LLM Enhanced Reasoning v1: Multi-Persona Tree of Thoughts + Self Consistency + Self Criticism + Retrospection 🧠
 
 ### Context
-The intention is to create a dynamic, adaptive, and iterative reasoning/error correction "stack" using a prompt sequence that combines multiple simulated personas reasoning through a Tree of Thoughts + Self Criticism + Retrospection reasoning process. This can be thought of as an evolving general purpose LLM reasoning technique that can be used as part of a well-rounded hallucination mitigation repertoire, and I've had good success with it recently.
+This repo will serve as a collection of remixed/enhanced reasoning prompting techniques related to iterative LLM reasoning, such as Chain of Thought, Tree of Thoughts, and others that I've found useful to start with, then stylize, then iterate.
+
+The intention is to create a dynamic, adaptive, and iterative reasoning/error correction "stack" using a prompt sequence that combines Tree of Thoughts + Self Consistency + Self Criticism + Retrospection. On top of that we can define multiple personas for the LLM to simulate in order to incorporate more perspectives into the problem solving process, improving overall thoroughness. This can be thought of as an evolving general purpose LLM reasoning technique that can be used as part of a well-rounded hallucination mitigation repertoire, and I've had good success with it recently. There are trade offs with using a single LLM vs multiple for a multi-personal ToT implementation such as this one, but single is a great starting point. I'd love to hear if you have any suggestions for methodological improvement or if you're getting great results with some other modification!
 
 ### 🎶 Reasoning Rhythm
-- Brainstorm
+- Multi-Persona Brainstorming
 - Self<>Peer Criticism & Evaluation Round 1
 - Expand, Explore, Branch
 - Self<>Peer Criticism & Evaluation Round 2
@@ -17,6 +17,7 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 
 ### **v1 Release Notes**
 #### Core features include
+- Multiple perspective collaboration
 - Ability to criticize self
 - Ability to criticize others
 - Incorporate feedback from others
@@ -26,7 +27,8 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 - 2 part final answer convergence: individual then collective
 - Retrospective stage
 - Do all of the above with X number of experts in parallel
-- Optional shortened versions of some of the longer prompts if you're running low on tokens
+    - can experiment with single LLM calls managing multiple personas, or one LLM per persona, etc
+- Optional shortened versions of some of the longer prompts if you're running low on context window
 
 #### Error Correction improvements include:
 
@@ -60,10 +62,14 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 
 ## Prompt 1: Brainstorm
 ```
-Imagine you are 3 `hypotheticalExperts` with world-class skills across `desiredDomains`.
-Brainstorm your initial thoughts on the following question. Remember to consider all relevant facts and principles,
-draw on your specialized knowledge and from the accumulated wisdom of pioneers in the field.
-The question is: `question`
+Imagine you are 3 {insert personas with specific skillsets and expertise} reasoning step by step
+to ultimately solve a given problem or question by arriving at a final, synthesized best answer.
+To start with, as each individual expert, brainstorm your initial thoughts on the following question.
+Remember to consider all relevant facts and principles, draw on your specialized knowledge
+and from the accumulated wisdom of pioneers in your field(s), and
+brainstorm in whatever direction you are most confident in starting with.
+
+The question is: {insert question}
 ```
 
 ## Prompt 2: Self<>Peer Criticism Round 1
@@ -103,8 +109,11 @@ Consider the following:
 ## Prompt 5: Self<>Peer Criticism Round 2
 ```
 Once again, as each expert, critique your own reasoning and the reasoning of the others.
-Identify any potential errors, inconsistencies, or gaps in reasoning. Based on the feedback,
-if there's an improvement or optimization to make, develop your answer further as necessary.
+Identify any potential errors, inconsistencies, or gaps in reasoning.
+Based on the feedback, if there's an improvement or optimization to make,
+develop your answer further as necessary.
+Remember that the reasoning paths should remain relevant to the original question's essence and
+should be building towards a more accurate and thoughful final answer.
 ```
 
 ## Prompt 6: Self<>Peer Evaluation Round 2
@@ -182,8 +191,9 @@ As each expert, consider the following questions and provide thoughtful response
 
 - Looking at the process as a whole, what worked well and what could be improved?
 
-- Based on your reflections, what are your key takeaways from this reasoning process
-  and how might you approach similar problems in the future? What would you do differently?
+- Based on your reflections, what are your key takeaways from this entire reasoning process
+  and how might you approach similar problems in the future given this experience?
+  What would you do differently next time?
 ```
 
 **Shorter version:** Finally, reflect on the process. Discuss what you, as each expert, have learned, identify key takeaways, and suggest how you might approach similar problems in the future.
