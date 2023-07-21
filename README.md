@@ -1,9 +1,9 @@
-# 🌳 LLM Enhanced Reasoning v1: Tree of Thoughts + Self Criticism + Retrospection 🧠
+# 🌳 LLM Enhanced Reasoning v1: Multi-Persona Tree of Thoughts + Self Criticism + Retrospection 🧠
 
 This repo will serve as a collection of remixed/enhanced reasoning prompting techniques related to Tree of Thoughts reasoning that I've found useful to start with, then stylize, then iterate
 
 ### Context
-The intention is to create a dynamic, adaptive, and iterative reasoning/error correction "stack" using a prompt sequence that combines Tree of Thoughts + Self Criticism + Retrospection. This can be thought of as an evolving general purpose LLM reasoning technique that can be used as part of a well-rounded hallucination mitigation repertoire, and I've had good success with it recently.
+The intention is to create a dynamic, adaptive, and iterative reasoning/error correction "stack" using a prompt sequence that combines multiple simulated personas reasoning through a Tree of Thoughts + Self Criticism + Retrospection reasoning process. This can be thought of as an evolving general purpose LLM reasoning technique that can be used as part of a well-rounded hallucination mitigation repertoire, and I've had good success with it recently.
 
 ### 🎶 Reasoning Rhythm
 - Brainstorm
@@ -46,9 +46,15 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 - Understanding the Flow: Each stage of the reasoning technique has a specific purpose and contributes to the overall process. Understanding the function of each stage and how they fit together can help you guide the process more effectively and help you customize it to your needs.
 - Depending on context length limitations of your model, you can use a condensed version. Included are shortened versions of the convergence and retro prompts. Also, you can merge the criticism and evaluation into a single prompt to save tokens, though you may lose some of the improved clarity from separate prompts and responses.
 - Active Engagement: Don't just observe the process passively. Experiment with this! Engage actively with the prompts and responses, challenge assumptions, provide additional information, and guide the exploration of new lines of thought. Stylize it to your specific question and context, and refine. This is meant just to be a starting template.
-- Manage Complexity: This is a fairly complex reasoning technique with many stages. Be mindful of the complexity and try to manage it effectively. This could involve breaking down complex problems into smaller, more manageable parts, or being selective about which stages to include for simpler problems. This can take some experimentation.
-- Give your unique question, specify the `hypotheticalExperts` you'd like to invoke and their associated domains/skillsets in `desiredDomains` clearly to help the LLM simulate a range of perspectives more successfully
 - Refine/customize the prompt associated with the Evaluation stage(s) to help the LLM estimate confidence/likelihood based on your own guidance
+- Manage Complexity: This is a fairly complex reasoning technique with many stages. Be mindful of the complexity and try to manage it effectively. This could involve breaking down complex problems into smaller, more manageable parts, or being selective about which stages to include for simpler problems. This can take some experimentation.
+- Give your unique question, specify the `hypotheticalExperts` you'd like to invoke and their associated domains/skillsets in `desiredDomains` clearly to help the LLM simulate a range of perspectives more successfully.
+
+    - Example persona definitions:
+      
+        - **Scientist Persona:** "Imagine yourself as a seasoned scientist, operating in a world governed by evidence and rigorous methodology. Prioritize empirical data, scientific theories, and logical reasoning in your analysis. Draw from a wide range of scientific disciplines as needed. Use your understanding of scientific principles to dissect problems, always seeking to identify cause and effect. Make sure to communicate your findings clearly, and don't shy away from complex scientific jargon - your audience understands it."
+        - **Historian Persona:** "Step into the shoes of a historian, with a profound understanding of humanity's past. Your analyses should be deeply rooted in historical context, referencing relevant events, trends, and patterns from history. Use your knowledge of past civilizations, conflicts, and cultural shifts to interpret the current situation. Remember, your insights should serve to illuminate the present and offer foresights about the future. Your audience appreciates a narrative that ties the past, present, and future together."
+        - **Optimist Persona:** "You are an optimist, someone who sees the glass as half full rather than half empty. In every situation, seek out the positive, the potential, the opportunity. Emphasize solutions rather than problems, progress rather than obstacles, and hope rather than despair. Even when discussing challenges, focus on how they could be overcome or what we might learn from them. Your audience turns to you for a hopeful perspective on the future, so make sure your responses inspire optimism and confidence."
 
 # 🔗 Prompt Sequence
 
