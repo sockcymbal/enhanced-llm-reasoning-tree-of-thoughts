@@ -137,18 +137,18 @@ the perspectives and insights of the other experts as well.
 Based on all this, what is the single best `answer` to the question: `question?`
 ```
 
-**Shorter version:** Refine your answers and address any identified flaws. As each expert, converge on the most likely `answer`, taking into account all perspectives and critiques. As a reminder, the original question is `question?`
+**Shorter version:** Refine your answers and address any identified flaws. As each expert, converge on the most likely {answer}, taking into account all perspectives and critiques. As a reminder, the original question is {insert original question}.
 
 ## Prompt 8: Convergence on Best Collective Answer
 
 ### Goal
-Synthesize the best individual answers from the experts and arrive at a single final, most likely/helpful answer.
+Synthesize the best individual answers from the experts and arrive at a single final, most likely/accurate/helpful answer.
 
 ### Prompt
 ```
 Now, let's have all the experts converge together on the best collective answer by
 synthesizing each expert's individual final answer from the previous step.
-The experts will finalize their reasoning process and agree on the single best `answer` to the question: `question?`
+The experts will finalize their reasoning process and agree on the single best {answer} to the question: {insert original question}?
 ```
 
 ## Prompt 9: Retrospective
