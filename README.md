@@ -50,7 +50,7 @@ The intention is to create a dynamic, adaptive, and iterative reasoning/error co
 - Active Engagement: Don't just observe the process passively. Experiment with this! Engage actively with the prompts and responses, challenge assumptions, provide additional information, and guide the exploration of new lines of thought. Stylize it to your specific question and context, and refine. This is meant just to be a starting template.
 - Refine/customize the prompt associated with the Evaluation stage(s) to help the LLM estimate confidence/likelihood based on your own guidance
 - Manage Complexity: This is a fairly complex reasoning technique with many stages. Be mindful of the complexity and try to manage it effectively. This could involve breaking down complex problems into smaller, more manageable parts, or being selective about which stages to include for simpler problems. This can take some experimentation.
-- Give your unique question and expectations, specify the `hypothetical personas with specific skillsets and expertise` clearly at the beginning to help the LLM simulate a range of perspectives more successfully.
+- Given your unique question and expectations, specify the `hypothetical personas with specific skillsets and expertise` clearly at the beginning to help the LLM simulate a range of perspectives more successfully.
 
     - **Example persona definitions:**
       
@@ -134,7 +134,7 @@ Consider the initial thoughts, the critiques made and how they were addressed, t
 Synthesize all this information and formulate a final answer that you are most proud of.
 Remember, this answer should not just be the most likely from your individual perspective but should take into account
 the perspectives and insights of the other experts as well.
-Based on all this, what is the single best `answer` to the question: `question?`
+Based on all this, what is the single best {answer} to the question: {insert original question}?
 ```
 
 **Shorter version:** Refine your answers and address any identified flaws. As each expert, converge on the most likely {answer}, taking into account all perspectives and critiques. As a reminder, the original question is {insert original question}.
@@ -171,28 +171,26 @@ Appending a Retrospective phase to Tree of Thoughts gives the LLM (and human) an
 Finally, take a moment to reflect on the entire reasoning process, across all levels and abstractions.
 As each expert, consider the following questions and provide thoughtful responses:
 
-- Interactions and Emergent Properties: Throughout all stages of the reasoning process,
+- Relection 1: Interactions and Emergent Properties: Throughout all stages of the reasoning process,
   how did the various components interact with each other, and what positive and negative
   emergent properties were observed? How did these interactions and properties affect
   the overall outcome, and how could they be leveraged or mitigated in future iterations of the process?
 
-- Self-Regulation and Adaptation: How well did the system self-regulate during the reasoning process,
+- Reflection 2: Self-Regulation and Adaptation: How well did the system self-regulate during the reasoning process,
   and how did this regulation influence the effectiveness of each stage?
   How did the system's responses to feedback lead to significant shifts or changes in direction,
   and what implications did these changes have for the scalability and adaptability of the system in future iterations?
 
-- During the expansion phase, were you able to effectively explore new lines of thinking?
+- Reflection 3: During the expansion phase, were you able to effectively explore new lines of thinking?
   What challenges did you encounter, if any?
 
-- How confident were you in your ability to estimate a likelihood of correctness/quality, given the context?
+- Reflection 4: How confident were you in your ability to estimate a likelihood of correctness/quality, given the context?
 
-- In the convergence phase, were you able to synthesize all the insights and arrive at a final,
+- Reflection 5: In the convergence phase, were you able to synthesize all the insights and arrive at a final,
   most likely answer? How confident are you in this answer?
 
-- Looking at the process as a whole, what worked well and what could be improved?
-
-- Based on your reflections, what are your key takeaways from this entire reasoning process
-  and how might you approach similar problems in the future given this experience?
+- Reflection 6: Based on all of your reflections, what are your key takeaways from this
+  entire reasoning process and how might you approach similar problems in the future given this experience?
   What would you do differently next time?
 ```
 
