@@ -74,7 +74,7 @@ Consider the initial thoughts, the critiques made and how they were addressed, t
 Synthesize all this information and formulate a final answer that you are most proud of.
 Remember, this answer should not just be the most likely from your individual perspective but should take into account
 the perspectives and insights of the other experts as well.
-Based on all this, what is the single best `answer` to the question: `question?`
+Based on all this, what is the single best {answer} to the question: {insert original question}?
 ```
 
 **Shorter version:** Refine your answers and address any identified flaws. As each expert, converge on the most likely `answer`, taking into account all perspectives and critiques. As a reminder, the original question is `question?`
@@ -88,7 +88,7 @@ Synthesize the best individual answers from the experts and arrive at a single f
 ```
 Now, let's have all the experts converge together on the best collective answer by
 synthesizing each expert's individual final answer from the previous step.
-The experts will finalize their reasoning process and agree on the single best `answer` to the question: `question?`
+The experts will finalize their reasoning process and agree on the single best {answer} to the question: {insert original question}?
 ```
 
 ## Prompt 9: Retrospective
